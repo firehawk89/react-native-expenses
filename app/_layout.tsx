@@ -9,7 +9,7 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen
           name="(tabs)"
-          options={{ headerTitle: 'Expenses Overview' }}
+          options={{ title: 'Expenses Overview', headerShown: false }}
         />
         <Stack.Screen
           name="manage"
