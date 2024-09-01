@@ -27,6 +27,8 @@ const EXPENSES: Expense[] = [
   },
 ]
 
+export const namespace = 'expensesContainer'
+
 interface ExpensesContainerProps {
   expenses: Expense[]
   period: PeriodType
@@ -37,6 +39,7 @@ const ExpensesContainer: FC<ExpensesContainerProps> = ({
   period,
 }) => {
   console.log('ExpensesContainer', { expenses })
+
   return (
     <View>
       <ExpensesSummary data={EXPENSES} period={period} />
