@@ -1,6 +1,8 @@
-import React, { FC, useMemo } from 'react'
+import { FC, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { View, Text } from 'react-native'
 
+import { namespace } from '../..'
 import { Expense, PeriodType } from '../../types'
 
 interface ExpensesSummaryProps {
@@ -9,13 +11,7 @@ interface ExpensesSummaryProps {
 }
 
 const ExpensesSummary: FC<ExpensesSummaryProps> = ({ data, period }) => {
-  const periodTitleMap = {
-    [PeriodType.WEEK]: 'Last week:',
-    [PeriodType.MONTH]: 'Last month:',
-    [PeriodType.YEAR]: 'Last year:',
-  }
-
-  const displayPeriod = periodTitleMap[period]
+  const { t } = useTranslation()
 
   const totalSum = useMemo(() => {
     const sum = data.reduce((acc, expense) => acc + expense.amount, 0)
@@ -24,8 +20,10 @@ const ExpensesSummary: FC<ExpensesSummaryProps> = ({ data, period }) => {
 
   return (
     <View>
-      <Text>{displayPeriod}</Text>
-      <Text>Total: ${totalSum}</Text>
+      <Text>{t(`components.${namespace}.period.${period}`)}</Text>
+      <Text>
+        {t(`components.${namespace}.total`)} ${totalSum}
+      </Text>
     </View>
   )
 }

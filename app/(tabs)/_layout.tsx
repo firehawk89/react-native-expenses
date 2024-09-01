@@ -1,8 +1,11 @@
-import { Colors } from '@/constants/Colors'
+import { Colors } from '@/utils/Colors'
 import { Ionicons } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
+import { useTranslation } from 'react-i18next'
 
 export default function TabLayout() {
+  const { t } = useTranslation()
+
   return (
     <Tabs
       screenOptions={{
@@ -15,16 +18,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'All',
-          headerTitle: 'All Expenses',
+          title: t('navigation.allExpenses.title'),
+          headerTitle: t('navigation.allExpenses.headerTitle'),
           tabBarIcon: (props) => <Ionicons name="hourglass" {...props} />,
         }}
       />
       <Tabs.Screen
         name="recent"
         options={{
-          title: 'Recent',
-          headerTitle: 'Recent Expenses',
+          title: t('navigation.recentExpenses.title'),
+          headerTitle: t('navigation.recentExpenses.headerTitle'),
           tabBarIcon: (props) => <Ionicons name="calendar" {...props} />,
         }}
       />
