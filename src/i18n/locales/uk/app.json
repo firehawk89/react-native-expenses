@@ -1,0 +1,25 @@
+{
+  "components": {
+    "expensesContainer": {
+      "period": {
+        "MONTH": "Останнього місяця:",
+        "WEEK": "Останнього тижня:",
+        "YEAR": "Останнього року:"
+      },
+      "total": "Загалом:"
+    }
+  },
+  "navigation": {
+    "allExpenses": {
+      "headerTitle": "Всі витрати",
+      "title": "Всі"
+    },
+    "manageExpense": {
+      "headerTitle": "Керування витратою"
+    },
+    "recentExpenses": {
+      "headerTitle": "Нещодавні витрати",
+      "title": "Нещодавні"
+    }
+  }
+}

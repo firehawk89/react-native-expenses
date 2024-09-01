@@ -1,0 +1,25 @@
+{
+  "components": {
+    "expensesContainer": {
+      "period": {
+        "MONTH": "Last month:",
+        "WEEK": "Last week:",
+        "YEAR": "Last year:"
+      },
+      "total": "Total:"
+    }
+  },
+  "navigation": {
+    "allExpenses": {
+      "headerTitle": "All expenses",
+      "title": "All"
+    },
+    "manageExpense": {
+      "headerTitle": "Manage expense"
+    },
+    "recentExpenses": {
+      "headerTitle": "Recent expenses",
+      "title": "Recent"
+    }
+  }
+}
