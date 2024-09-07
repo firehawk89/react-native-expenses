@@ -4,6 +4,7 @@ import { View, Text } from 'react-native'
 
 import { namespace } from '../..'
 import { Expense, PeriodType } from '../../types'
+import styles from './styles'
 
 interface ExpensesSummaryProps {
   data: Expense[]
@@ -19,9 +20,11 @@ const ExpensesSummary: FC<ExpensesSummaryProps> = ({ data, period }) => {
   }, [data])
 
   return (
-    <View>
-      <Text>{t(`components.${namespace}.period.${period}`)}</Text>
-      <Text>
+    <View style={styles.container}>
+      <Text style={styles.period}>
+        {t(`components.${namespace}.period.${period}`)}
+      </Text>
+      <Text style={styles.total}>
         {t(`components.${namespace}.total`)} ${totalSum}
       </Text>
     </View>
