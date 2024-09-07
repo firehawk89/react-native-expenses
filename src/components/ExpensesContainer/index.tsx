@@ -3,6 +3,7 @@ import { View } from 'react-native'
 
 import ExpensesList from './components/ExpensesList'
 import ExpensesSummary from './components/ExpensesSummary'
+import styles from './styles'
 import { Expense, PeriodType } from './types'
 
 // FIXME: Replace with real data
@@ -41,7 +42,7 @@ const ExpensesContainer: FC<ExpensesContainerProps> = ({
   console.log('ExpensesContainer', { expenses })
 
   return (
-    <View>
+    <View style={styles.container}>
       <ExpensesSummary data={EXPENSES} period={period} />
       <ExpensesList data={EXPENSES} />
     </View>
