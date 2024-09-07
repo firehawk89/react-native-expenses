@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   amountContainer: {
+    flex: 0.3,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 12,
