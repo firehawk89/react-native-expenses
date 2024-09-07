@@ -1,3 +1,4 @@
+import { getFormattedDate, getFormattedPrice } from '@/utils/format'
 import { FC } from 'react'
 import { Pressable, Text, View } from 'react-native'
 
@@ -11,17 +12,18 @@ interface ExpenseCardProps {
 const ExpenseCard: FC<ExpenseCardProps> = ({ data }) => {
   const { title, date, amount } = data
 
-  const ISODate = date.toISOString()
+  const formattedDate = getFormattedDate(date)
+  const formattedAmount = getFormattedPrice(amount)
 
   return (
     <Pressable>
       <View style={styles.container}>
         <View>
           <Text style={[styles.text, styles.title]}>{title}</Text>
-          <Text style={styles.text}>{ISODate}</Text>
+          <Text style={styles.text}>{formattedDate}</Text>
         </View>
         <View style={styles.amountContainer}>
-          <Text style={styles.amount}>{amount}</Text>
+          <Text style={styles.amount}>{formattedAmount}</Text>
         </View>
       </View>
     </Pressable>
