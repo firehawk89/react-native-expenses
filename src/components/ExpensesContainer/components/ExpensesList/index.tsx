@@ -1,11 +1,11 @@
+import { Expense } from '@/global/types'
 import { FC } from 'react'
 import { FlatList, ListRenderItemInfo } from 'react-native'
 
-import { Expense } from '../../types'
 import ExpenseCard from '../ExpenseCard'
 
 const renderExpenseCard = ({ item }: ListRenderItemInfo<Expense>) => {
-  return <ExpenseCard data={item} onPress={(data) => console.log(data)} />
+  return <ExpenseCard data={item} />
 }
 
 interface ExpensesListProps {

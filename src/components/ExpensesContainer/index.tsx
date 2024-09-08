@@ -1,13 +1,14 @@
+import { Expense } from '@/global/types'
 import { FC } from 'react'
 import { View } from 'react-native'
 
 import ExpensesList from './components/ExpensesList'
 import ExpensesSummary from './components/ExpensesSummary'
 import styles from './styles'
-import { Expense, PeriodType } from './types'
+import { PeriodType } from './types'
 
 // FIXME: Replace with real data
-const EXPENSES: Expense[] = [
+export const EXPENSES: Expense[] = [
   {
     id: '1',
     title: 'Coffee',
