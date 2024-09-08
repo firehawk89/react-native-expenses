@@ -1,3 +1,4 @@
+import IconButton from '@/components/IconButton'
 import { Colors } from '@/utils/Colors'
 import { Ionicons } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
@@ -10,9 +11,17 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerStyle: { backgroundColor: Colors.primary[500] },
-        headerTintColor: '#fff',
+        headerTintColor: Colors.light,
         tabBarStyle: { backgroundColor: Colors.primary[500] },
         tabBarActiveTintColor: Colors.accent[500],
+        headerRight: ({ tintColor }) => (
+          <IconButton
+            name="add"
+            size={24}
+            color={tintColor}
+            onPress={() => {}}
+          />
+        ),
       }}
     >
       <Tabs.Screen
