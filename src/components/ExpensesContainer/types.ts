@@ -3,10 +3,3 @@ export enum PeriodType {
   MONTH = 'MONTH',
   YEAR = 'YEAR',
 }
-
-export type Expense = {
-  id: string
-  title: string
-  amount: number
-  date: Date
-}
