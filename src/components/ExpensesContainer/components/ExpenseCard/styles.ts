@@ -15,9 +15,6 @@ export const styles = StyleSheet.create({
     shadowOffset: { width: 1, height: 1 },
     backgroundColor: Colors.primary[500],
   },
-  pressed: {
-    opacity: 0.75,
-  },
   text: {
     color: Colors.primary[50],
   },
