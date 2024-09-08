@@ -7,16 +7,20 @@ import { styles } from './styles'
 
 interface ExpenseCardProps {
   data: Expense
+  onPress: (data: Expense) => void
 }
 
-const ExpenseCard: FC<ExpenseCardProps> = ({ data }) => {
+const ExpenseCard: FC<ExpenseCardProps> = ({ data, onPress }) => {
   const { title, date, amount } = data
 
   const formattedDate = getFormattedDate(date)
   const formattedAmount = getFormattedPrice(amount)
 
   return (
-    <Pressable>
+    <Pressable
+      style={({ pressed }) => pressed && styles.pressed}
+      onPress={() => onPress(data)}
+    >
       <View style={styles.container}>
         <View>
           <Text style={[styles.text, styles.title]}>{title}</Text>

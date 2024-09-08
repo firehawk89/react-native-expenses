@@ -15,6 +15,9 @@ export const styles = StyleSheet.create({
     shadowOffset: { width: 1, height: 1 },
     backgroundColor: Colors.primary[500],
   },
+  pressed: {
+    opacity: 0.75,
+  },
   text: {
     color: Colors.primary[50],
   },
@@ -30,7 +33,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 4,
     borderRadius: 4,
-    backgroundColor: 'white',
+    backgroundColor: Colors.light,
   },
   amount: {
     fontWeight: 'bold',
