@@ -2,6 +2,8 @@
  * Colors that are used in the app.
  */
 export const Colors = {
+  light: '#fff',
+  dark: '#000',
   primary: {
     50: '#e4d9fd',
     100: '#c6affc',
