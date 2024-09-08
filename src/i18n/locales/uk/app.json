@@ -10,12 +10,13 @@
     }
   },
   "navigation": {
+    "tabs": { "title": "Витрати" },
     "allExpenses": {
       "headerTitle": "Всі витрати",
       "title": "Всі"
     },
-    "manageExpense": {
-      "headerTitle": "Керування витратою"
+    "expenseDetails": {
+      "headerTitle": "Деталі витрати"
     },
     "recentExpenses": {
       "headerTitle": "Нещодавні витрати",

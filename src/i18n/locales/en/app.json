@@ -10,12 +10,13 @@
     }
   },
   "navigation": {
+    "tabs": { "title": "Expenses" },
     "allExpenses": {
       "headerTitle": "All expenses",
       "title": "All"
     },
-    "manageExpense": {
-      "headerTitle": "Manage expense"
+    "expenseDetails": {
+      "headerTitle": "Expense details"
     },
     "recentExpenses": {
       "headerTitle": "Recent expenses",
