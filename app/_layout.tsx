@@ -14,12 +14,13 @@ export default function RootLayout() {
         <Stack.Screen
           name="(tabs)"
           options={{
+            title: t('navigation.tabs.title'),
             headerShown: false,
           }}
         />
         <Stack.Screen
-          name="manage"
-          options={{ headerTitle: t('navigation.manageExpense.headerTitle') }}
+          name="details/[id]"
+          options={{ headerTitle: t('navigation.expenseDetails.headerTitle') }}
         />
         <Stack.Screen
           name="settings"
