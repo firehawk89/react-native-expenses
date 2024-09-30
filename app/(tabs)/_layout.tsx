@@ -1,11 +1,14 @@
 import IconButton from '@/components/IconButton'
 import { Colors } from '@/utils/Colors'
 import { Ionicons } from '@expo/vector-icons'
-import { Tabs } from 'expo-router'
+import { Tabs, useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
+
+import { NEW_EXPENSE_ID } from '../details/[id]'
 
 export default function TabLayout() {
   const { t } = useTranslation()
+  const router = useRouter()
 
   return (
     <Tabs
@@ -19,7 +22,7 @@ export default function TabLayout() {
             name="add"
             size={24}
             color={tintColor}
-            onPress={() => {}}
+            onPress={() => router.push(`/details/${NEW_EXPENSE_ID}`)}
           />
         ),
       }}
