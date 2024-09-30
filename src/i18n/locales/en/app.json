@@ -15,12 +15,21 @@
       "headerTitle": "All expenses",
       "title": "All"
     },
-    "expenseDetails": {
-      "headerTitle": "Expense details"
-    },
     "recentExpenses": {
       "headerTitle": "Recent expenses",
       "title": "Recent"
+    }
+  },
+  "screens": {
+    "expenseDetails": {
+      "add": "Add",
+      "cancel": "Cancel",
+      "deleteExpense": "Delete expense",
+      "headerTitle": "Expense details",
+      "newExpense": {
+        "headerTitle": "New expense"
+      },
+      "save": "Save"
     }
   }
 }

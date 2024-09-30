@@ -2,9 +2,9 @@
   "components": {
     "expensesContainer": {
       "period": {
-        "MONTH": "Останнього місяця:",
-        "WEEK": "Останнього тижня:",
-        "YEAR": "Останнього року:"
+        "MONTH": "За останній місяць:",
+        "WEEK": "За останній тиждень:",
+        "YEAR": "За останній рік:"
       },
       "total": "Загалом:"
     }
@@ -15,12 +15,21 @@
       "headerTitle": "Всі витрати",
       "title": "Всі"
     },
-    "expenseDetails": {
-      "headerTitle": "Деталі витрати"
-    },
     "recentExpenses": {
       "headerTitle": "Нещодавні витрати",
       "title": "Нещодавні"
+    }
+  },
+  "screens": {
+    "expenseDetails": {
+      "add": "Створити",
+      "cancel": "Скасувати",
+      "deleteExpense": "Видалити витрату",
+      "headerTitle": "Деталі витрати",
+      "newExpense": {
+        "headerTitle": "Нова витрата"
+      },
+      "save": "Зберегти"
     }
   }
 }
