@@ -1,4 +1,5 @@
 import '@/i18n/i18n'
+import { Colors } from '@/utils/Colors'
 import '@/utils/gesture-handler'
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
@@ -10,7 +11,14 @@ export default function RootLayout() {
   return (
     <>
       <StatusBar style="auto" />
-      <Stack>
+      <Stack
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: Colors.primary[500],
+          },
+          headerTintColor: Colors.light,
+        }}
+      >
         <Stack.Screen
           name="(tabs)"
           options={{
@@ -20,7 +28,9 @@ export default function RootLayout() {
         />
         <Stack.Screen
           name="details/[id]"
-          options={{ headerTitle: t('navigation.expenseDetails.headerTitle') }}
+          options={{
+            presentation: 'modal',
+          }}
         />
         <Stack.Screen
           name="settings"
